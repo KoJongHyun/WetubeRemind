@@ -1,5 +1,11 @@
 header.header
   .header__container
     .header__logo
-      a(href="#")
+      a(href=routes.home)
         i.fab.fa-youtube
+    .nav
+      ul.nav__inner
+        li.nav__list
+          a.nav__link(href=routes.login) Login
+        li.nav__list
+          a.nav__link(href=routes.logout) Logout
