@@ -1,10 +1,10 @@
 header.header
-  .container
+  .container.container--header
     .logo
       a(href=routes.home)
         i.fab.fa-youtube
     .search
-      form(action=routes.search, method="get")
+      form(action=routes.search, method="GET")
         input(type="text", name="term", placeholder="Search...")
     .nav
       ul.nav__inner
