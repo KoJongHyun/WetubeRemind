@@ -1,8 +1,11 @@
 header.header
-  .header__container
-    .header__logo
+  .container
+    .logo
       a(href=routes.home)
         i.fab.fa-youtube
+    .search
+      form(action=routes.search, method="get")
+        input(type="text", name="term", placeholder="Search...")
     .nav
       ul.nav__inner
         li.nav__list
