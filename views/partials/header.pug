@@ -8,7 +8,15 @@ header.header
         input(type="text", name="term", placeholder="Search...")
     .nav
       ul.nav__inner
-        li.nav__list
-          a.nav__link(href=routes.login) Login
-        li.nav__list
-          a.nav__link(href=routes.logout) Logout
+        if !user.isAuthenticated
+          li.nav__list
+            a.nav__link(href=routes.login) Login
+          li.nav__list
+            a.nav__link(href=routes.join) Join
+        else
+          li.nav__list
+            a.nav__link(href=routes.userDetail(user.id)) Profile
+          li.nav__list
+            a.nav__link(href=`/videos/${routes.upload}`) Upload  
+          li.nav__list
+            a.nav__link(href=routes.logout) Logout
