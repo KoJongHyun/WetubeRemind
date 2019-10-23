@@ -6,6 +6,8 @@ block content
   .container
     h3 Searching by #{searchingBy}
     .videos
+      if videos.length === 0
+        h5 Videos not found
       each item in videos
         +videoBlock({
           id: item.id,
