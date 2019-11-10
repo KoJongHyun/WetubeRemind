@@ -16,10 +16,25 @@ header.header
               a.nav__link(href=routes.join) Join
           else
             li.nav__item
-              a.nav__link(href=routes.userDetail(user.id))
+              a.nav__link(href=`/videos/${routes.upload}`)
+                svg(xmlns="http://www.w3.org/2000/svg", width="24", height="24", viewBox="0 0 24 24")
+                  path(d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4zM14 13h-3v3H9v-3H6v-2h3V8h2v3h3v2z")
+            li.nav__item
+              div.nav__link
                 svg(xmlns="http://www.w3.org/2000/svg", width="18", height="18", viewBox="0 0 18 18")
                   path(d="M9 1C4.58 1 1 4.58 1 9s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8zm0 2.75c1.24 0 2.25 1.01 2.25 2.25S10.24 8.25 9 8.25 6.75 7.24 6.75 6 7.76 3.75 9 3.75zM9 14.5c-1.86 0-3.49-.92-4.49-2.33C4.62 10.72 7.53 10 9 10c1.47 0 4.38.72 4.49 2.17-1 1.41-2.63 2.33-4.49 2.33z")
-            li.nav__item
-              a.nav__link(href=`/videos/${routes.upload}`) Upload  
-            li.nav__item
-              a.nav__link(href=routes.logout) Logout
+              .user-layer
+                .user-layer__row
+                  .user-layer__column
+                    span.user-layer__thumb
+                  .user-layer__column
+                    span.user-layer__info 고종현
+                    span.user-layer__info no1kojong@gmail.com
+                .user-layer__row
+                  a.user-layer__link(href=routes.userDetail(user.id))
+                    i.fas.fa-user-edit
+                    span Edit profile
+                .user-layer__row
+                  a.user-layer__link(href=routes.logout)
+                    i.fas.fa-sign-out-alt
+                    span Logout
