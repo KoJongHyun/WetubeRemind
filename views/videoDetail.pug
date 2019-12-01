@@ -2,14 +2,23 @@
 extends layouts/main
 
 block content
-  .video
+  .video.container
     .video__player
       video(src=`/${video.fileUrl}`)
     .video__info
-      a.video__edit(href=routes.editVideo(video.id)) Edit Video
-      h5.video__title=video.title
-      span.video__views=video.views
-      p.video__description=video.description
+      .info-top
+        h5.video__title=video.title
+        if video.views === 1
+          span.video__views View 1
+        else 
+          span.video__views Views #{video.views}
+        
+      .info-bottom
+        .info-left
+          p.video__description=video.description
+        .info-right
+          a.video__edit(href=routes.editVideo(video.id))
+            button.button__small.button__small--bg Edit Video
     .video__comments
       if video.comments.length === 1
         span.video__comment-number 1 comment

@@ -1,5 +1,5 @@
 .social-login {
-  max-width: 320px;
+  max-width: 32rem;
   width: 100%;
   button {
     width: 100%;
@@ -7,11 +7,11 @@
     justify-content: center;
     color: $white;
     &:not(:last-child) {
-      margin-bottom: 15px;
+      margin-bottom: 1.5rem;
     }
     span {
-      margin-right: 10px;
-      font-size: 20px;
+      margin-right: 1rem;
+      font-size: 2rem;
     }
   }
   .social-login__github {

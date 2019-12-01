@@ -1,0 +1,15 @@
+.home-videos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+  grid-column-gap: 3rem;
+  grid-row-gap: 4rem;
+  .videoBlock {
+    &:first-child,
+    &:nth-child(2) {
+      grid-column: span 3;
+    }
+    &:nth-child(1n+3) {
+      grid-column: span 2;
+    }
+  }
+}

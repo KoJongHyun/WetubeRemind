@@ -1,3 +1,7 @@
+html {
+  font-size: 10px;
+}
+
 html,
 body {
   height: 100%;
@@ -12,7 +16,7 @@ body {
 
 main {
   width: 100%;
-  max-width: 1400px;
+  max-width: 140rem;
   margin: 0 auto;
   min-height: 70vh;
 }
@@ -24,26 +28,42 @@ a {
 
 a:focus,
 input:focus,
-button:focus {
+button:focus,
+textarea:focus {
   outline: none;
 }
 
 button,
-input {
+input,
+textarea {
   display: block;
-  width: 400px;
-  height: 35px;
-  line-height: 35px;
-  border-radius: 4px;
+  width: 40rem;
+  height: 4rem;
+  line-height: 4rem;
+  border-radius: 0.2rem;
   border: none;
-  margin: 7px auto;
-  padding: 0px 10px;
+  margin: 0.7rem auto;
+  padding: 0rem 1rem;
   box-sizing: border-box;
-  font-size: 14px;
+  font-size: 1.4rem;
+  box-shadow: 1px 3px 5px #dcdcdc;
   &::placeholder {
     font-weight: 300;
     color: rgba(0,0,0,0.7);
   }
+}
+
+.button__small {
+  width: auto;
+  padding: 0 1.5rem;
+  height: 3.5rem;
+  line-height: 3.5rem;
+  font-size: 1.3rem;
+}
+
+.button__small--bg {
+  background-color: $blue;
+  color: $white;
 }
 
 input[type="submit"],
